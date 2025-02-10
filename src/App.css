@@ -1,0 +1,28 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg);
+    background-image: url('./assets/bg_2.png');
+    background-size: 100% auto;
+    background-position-y: -2px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 61px 0 0;
+}
+
+.app > canvas {
+    max-height: 43vw;
+}
+
+@media (max-width: 676px) {
+    .app {
+        padding-top: 9vw;
+    }
+}
+
+@media (max-width: 484px) {
+    .app {
+        padding-top: 20px
+    }
+}

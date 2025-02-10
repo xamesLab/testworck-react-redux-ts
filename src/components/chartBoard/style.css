@@ -1,0 +1,312 @@
+.chart-board {
+    position: relative;
+}
+
+.chart-board__title {
+    text-transform: uppercase;
+    color: var(--second-text);
+}
+
+.chart-board__balance {
+    text-transform: uppercase;
+    color: var(--main-text);
+}
+
+.chart-board__balance-wrapp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.balance-detail {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.balance-detail__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.balance-detail__item::after {
+    position: absolute;
+    content: '';
+    color: var(--main-bg);
+    border-radius: 100%;
+    border: 2px solid #646e7e;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.balance-detail__item::before {
+    position: absolute;
+    content: 'h';
+    color: var(--main-bg);
+    border-radius: 100%;
+    background-color: #646e7e;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 10px;
+    font-size: 13px;
+}
+
+.balance-detail__name {
+    display: flex;
+    color: var(--second-text);
+    text-transform: uppercase;
+}
+
+.balance-detail__name > span {
+    margin-top: -2px;
+}
+
+.balance-detail__value {
+    color: var(--main-text);
+    flex: 1;
+    text-align: end;
+}
+
+.chart-board__date-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 23px 45px 33px;
+    color: var(--second-text);
+}
+
+.custom-tooltip {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    left: 0;
+    bottom: 130px;
+    text-align: center;
+    color: var(--accent-text-green);
+    font-size: 45px;
+    pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+    .chart-board__head {
+        padding: 0 42px;
+        margin-bottom: 55px;
+    }
+
+    .chart-board__title {
+        margin-bottom: 30px;
+    }
+
+    .chart-board__balance-wrapp {
+        height: 8.7vw;
+    }
+
+    .chart-board__balance {
+        font-size: 8.4vw;
+        line-height: 7.5vw;
+    }
+
+    .balance-detail {
+        padding-right: 48px;
+    }
+
+    .balance-detail__item {
+        gap: 22px;
+    }
+
+    .balance-detail__name, 
+    .balance-detail__value,
+    .chart-board__title {
+        line-height: 2.6vw;
+        font-size: 4vw;
+        font-weight: 700;
+    }
+
+    .balance-detail__value {
+        font-size: 41px;
+    }
+
+    .chart-board__date-list {
+        padding: 2.5vw 6vw 4vw;
+    }
+
+    .chart-board__date-list > li {
+        display: block;
+        line-height: 25px;
+        font-size: 30px;
+    }
+
+    .custom-tooltip {
+        bottom: 18vw;
+        font-size: 6vw;
+    }
+
+    .balance-detail__item::after {
+        height: 40px;
+        width: 40px;
+        right: -60px;
+    }
+    
+    .balance-detail__item::before {
+        height: 34px;
+        width: 34px;
+        right: -55px;
+        line-height: 15px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-board__head {
+        padding: 0 32px;
+        margin-bottom: 55px;
+    }
+    
+    .chart-board__title {
+        line-height: 18px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .chart-board__balance-wrapp {
+        height: 54px;
+    }
+
+    .balance-detail {
+        padding-right: 38px;
+    }
+
+    .balance-detail__item {
+        gap: 12px;
+    }
+
+    .balance-detail__name, .balance-detail__value {
+        line-height: 18px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .balance-detail__value {
+        font-size: 23px;
+    }
+
+    .chart-board__date-list > li {
+        display: block;
+        line-height: 15px;
+        font-size: 21px;
+    }
+
+    .balance-detail__item::after {
+        height: 25px;
+        width: 25px;
+        right: -38px;
+    }
+
+    .balance-detail__item::before {
+        height: 21px;
+        width: 21px;
+        right: -34px;
+        line-height: 5px;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 676px) {
+    .chart-board__head {
+        margin-bottom: 8.5vw;
+    }
+
+    .balance-detail {
+        padding-right: 30px;
+    }
+
+    .chart-board__balance {
+        font-size: clamp(40px, 8vw, 60px);
+        line-height: clamp(30px, 7vw, 40px);
+    }
+
+    .chart-board__balance-wrapp {
+        height: 51px;
+    }
+
+    .balance-detail__name, .balance-detail__value {
+        line-height: clamp(15px, 3vw, 18px);
+        font-size: clamp(18px, 3.5vw, 25px);
+    }
+
+    .chart-board__title {
+        line-height: clamp(15px, 3vw, 18px);
+        font-size: clamp(18px, 3.5vw, 25px);
+    }
+
+    .custom-tooltip {
+        bottom: 25vw;
+        font-size: clamp(18px, 5.5vw, 35px);
+    }
+
+    .chart-board__date-list {
+        padding: 2.5vw 5vw 5vw;
+    }
+
+    .chart-board__date-list > li {
+        line-height: 15px;
+        font-size: clamp(14px, 3vw, 19px);
+    }
+}
+
+@media (max-width: 484px) {
+    .chart-board__date-list {
+        padding: 0 5vw 10px;
+    }
+
+    .chart-board__head {
+        margin-bottom: 5px;
+    }
+
+    .balance-detail {
+        padding-right: 22px;
+    }
+
+    .chart-board__balance-wrapp {
+        height: 40px;
+    }
+
+    .balance-detail__item::after {
+        height: 18px;
+        width: 18px;
+        right: -30px;
+    }
+
+    .balance-detail__item::before {
+        height: 14px;
+        width: 14px;
+        right: -26px;
+    }
+
+    .chart-board__balance {
+        font-size: clamp(28px, 7vw, 40px);
+        line-height: clamp(15px, 5vw, 30px);
+    }
+
+    .chart-board__title {
+        margin-bottom: 12px;
+    }
+
+    .balance-detail__name, 
+    .balance-detail__value, 
+    .chart-board__title {
+        line-height: clamp(10px, 3vw, 18px);
+        font-size: clamp(14px, 3.5vw, 25px);
+    }
+
+    .custom-tooltip {
+        bottom: 20vw;
+    }
+}
