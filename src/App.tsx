@@ -17,16 +17,19 @@ function App() {
     }, [dispatch]);
 
     return (
-        <div className='app'>
-            <Header pageName={pageName} />
+        <>
+            <div className="info">Приложение для мобильных <br/>разрешений до 1200px!</div>
+            <div className='app'>
+                <Header pageName={pageName} />
 
-            {/* контент */}
-            <ChartBoard />
-            <Bots />
-            {/* окончание */}
+                {/* контент */}
+                <ChartBoard />
+                <Bots />
+                {/* окончание */}
 
-            <Toolbar setPageName={setPageName} />
-        </div>
+                <Toolbar setPageName={setPageName} />
+            </div>
+        </>
     )
 }
 

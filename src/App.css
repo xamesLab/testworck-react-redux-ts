@@ -1,5 +1,4 @@
 .app {
-    display: flex;
     flex-direction: column;
     background-color: var(--main-bg);
     background-image: url('./assets/bg_2.png');
@@ -9,6 +8,27 @@
     min-height: 100vh;
     min-height: 100dvh;
     padding: 61px 0 0;
+
+    /* отключил отображение для разрешений выше 750 */
+    display: none;
+}
+
+.info {
+    display: block;
+    text-align: center;
+    padding-top: 150px;
+    color: var(--second-text);
+    font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+    .app {
+      display: flex;
+    }
+
+    .info {
+        display: none;
+    }
 }
 
 .app > canvas {

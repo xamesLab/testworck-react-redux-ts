@@ -1,40 +1,31 @@
 :root {
-  --main-bg: #102135;
-  --second-bg: #18283c;
-  --card-bg: #1b293e;
-  --accent-bg: #fb9819;
+    --main-bg: #102135;
+    --second-bg: #18283c;
+    --card-bg: #1b293e;
+    --accent-bg: #fb9819;
 
-  --main-text: #ffffff;
-  --second-text: #4d6078;
-  --accent-text-green: #5ea853;
-  --accent-text-red: #f2427e; 
+    --main-text: #ffffff;
+    --second-text: #4d6078;
+    --accent-text-green: #5ea853;
+    --accent-text-red: #f2427e; 
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  background-color: var(--main-bg);
-
-  /* отключил отображение для разрешений выше 750 */
-  display: none;
-}
-
-@media (max-width: 1100px) {
-  :root {
-    display: block;
-  }
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: var(--main-bg);
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
